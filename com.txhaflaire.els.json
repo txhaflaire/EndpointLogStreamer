@@ -1,0 +1,77 @@
+{
+  "title": "com.txhaflaire.els",
+  "description": "Preference Domain: com.txhaflaire.els, Binary: EndpointLogStreamer",
+  "options": {
+    "remove_empty_properties": true
+  },
+  "type": "object",
+  "properties": {
+    "httpForwarderEnabled": {
+      "title": "Stream logs over HTTP",
+      "default": false,
+      "description": "Enable or disable to stream log entries to an HTTP Endpoint, additionally configure httpConfiguration as well.",
+      "type": "boolean"
+    },
+    "httpConfiguration": {
+      "title": "HTTP Endpoint Configuration",
+      "description": "Specify HTTP Endpoint URLs and optionally Authorization headers.",
+      "type": "object",
+      "properties": {
+        "httpAuthorizationHeader": {
+          "title": "Authorization Header",
+          "description": "Specify optionally Authorization headers.",
+          "type": "string"
+        },
+        "httpURL": {
+          "title": "HTTP Endpoint URL",
+          "description": "Specify HTTP Endpoint url starting with https://",
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": ["httpURL"]
+    },
+    "sentinelForwarderEnabled": {
+      "title": "Stream logs to Microsoft Log Analytics",
+      "default": false,
+      "description": "Enable or disable to stream log entries to an Microsoft Log's Analytics Workspace, additionally configure sentinelConfiguration as well.",
+      "type": "boolean"
+    },
+    "sentinelConfiguration": {
+      "title": "Log Analytics Configuration",
+      "type": "object",
+      "properties": {
+        "customerID": {
+          "title": "Customer ID or Workspace ID",
+          "description": "Specify the Log Analytics Workspace/Customer ID",
+          "type": "string"
+        },
+        "sharedKey": {
+          "title": "Shared Key",
+          "description": "Specify the primary or secondary authentication key",
+          "type": "string"
+        },
+        "logType": {
+          "title": "Log Type",
+          "description": "Optionally specify a custom LogType / Table name",
+          "type": "string"
+        }
+      },
+      "required": ["customerID", "sharedKey" ]
+    },
+    "logPaths": {
+      "title": "Log Paths",
+      "description": "Specify either one or multiple log files to be monitored and streamed",
+      "type": "array",
+      "items": {
+        "title": "Log Path",
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "httpForwarderEnabled",
+    "logPaths",
+    "sentinelForwarderEnabled"
+  ]
+}

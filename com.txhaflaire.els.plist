@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>httpConfiguration</key>
+	<dict>
+		<key>httpAuthorizationHeader</key>
+		<string>Splunk 4dc134qa3-a591-252d2-be48-21553426df1</string>
+		<key>httpURL</key>
+		<string>https://splunk.server.com:8088/services/collector/raw</string>
+	</dict>
+	<key>httpForwarderEnabled</key>
+	<true/>
+	<key>logPaths</key>
+	<array>
+		<string>/var/log/install.log</string>
+		<string>/var/log/jamf.log</string>
+	</array>
+	<key>sentinelConfiguration</key>
+	<dict>
+		<key>customerID</key>
+		<string>18k6cc7d-yq72-4ja4-9729-1935aaf610ac</string>
+		<key>logType</key>
+		<string>EndpointLogs</string>
+		<key>sharedKey</key>
+		<string>EqnMCcDF2l7+QtrkAybpBSeWJ9SI432pboImI3zp+u5vM4CA8a3/cOFMhD+TF8xTHHD3b4A==</string>
+	</dict>
+	<key>sentinelForwarderEnabled</key>
+	<true/>
+</dict>
+</plist>

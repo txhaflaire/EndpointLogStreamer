@@ -24,6 +24,9 @@ To find out more about managing **EndpointLogStreamer** please refer to the Wiki
 > To respect system performance and ensure keep the footprint as low as possible all new log entries are being added to a buffer, once the buffer either reaches 5000 bytes or 180 seconds the buffer with entries are flushed and streamed to either the HTTP Endpoint, Log Analytics workspace or even both!
 
 
+*Jamf Pro JSON App Manifest*
+<img width="1027" alt="JamfProJSONManifest" src="./Images/JamfProJSONManifest.png">
+
 ##### Persistence
 
 To ensure EndpointLogStreamer automatically runs after installation, a LaunchDaemon is included in the installer and up on load it will execute the EndpointLogStreamer binary and starts monitoring and streaming logs.

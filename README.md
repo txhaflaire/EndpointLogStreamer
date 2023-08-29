@@ -18,7 +18,7 @@ As with many tools, also **EndpointLogStreamer** does require a minimal configur
 
 Provided in this repository you will find an Jamf Pro JSON Schema for EndpointLogStreamer to easily configure it within Jamf Pro, alternatively you will also find an example plist which can be used as baseline as well which can be distributed by any MDM.
 
-To find out more about managing **EndpointLogStreamer** please refer to the Wiki on this GitHub repository.
+To find out more about managing **EndpointLogStreamer** please refer to the [Wiki](https://github.com/txhaflaire/EndpointLogStreamer/wiki/Managing-EndpointLogStreamer-Configuration) on this GitHub repository.
 
 > [!NOTE]  
 > To respect system performance and ensure keep the footprint as low as possible all new log entries are being added to a buffer, once the buffer either reaches 5000 bytes or 180 seconds the buffer with entries are flushed and streamed to either the HTTP Endpoint, Log Analytics workspace or even both!
